@@ -1,0 +1,73 @@
+name: AFKLog
+version: ${project.version}
+main: pl.jaruso99.afklog.AFKLogPlugin
+api-version: 1.16
+author: jaruso99
+description: System logów AFK z integracją LuckPerms
+
+softdepend:
+  - LuckPerms
+
+commands:
+  dodajafk:
+    description: Dodaje gracza do śledzenia AFK
+    usage: /dodajafk <nick>
+    permission: afklog.dodaj
+  usunafk:
+    description: Usuwa gracza ze śledzenia AFK (i jego logi)
+    usage: /usunafk <nick>
+    permission: afklog.usun
+  afkpanel:
+    description: Otwiera graficzny panel z logami AFK
+    usage: /afkpanel
+    permission: afklog.panel
+  afkkicker:
+    description: Ustawia automatyczny kick za zbyt długi AFK
+    usage: /afkkicker <nick> <minuty>
+    permission: afklog.kicker
+  dodajgrupeafk:
+    description: Dodaje grupę LuckPerms do automatycznego śledzenia AFK
+    usage: /dodajgrupeafk <nazwa_grupy>
+    permission: afklog.grupa
+  usungrupeafk:
+    description: Usuwa grupę LuckPerms ze śledzenia AFK
+    usage: /usungrupeafk <nazwa_grupy>
+    permission: afklog.usungrupe
+  afkstats:
+    description: Pokazuje statystyki AFK gracza z przeliczeniem dziennym
+    usage: /afkstats <nick> [dni]
+    permission: afklog.stats
+
+permissions:
+  afklog.admin:
+    description: Pełny dostęp do AFKLog
+    default: op
+    children:
+      afklog.dodaj: true
+      afklog.usun: true
+      afklog.panel: true
+      afklog.kicker: true
+      afklog.grupa: true
+      afklog.usungrupe: true
+      afklog.stats: true
+  afklog.dodaj:
+    description: Pozwala na /dodajafk
+    default: op
+  afklog.usun:
+    description: Pozwala na /usunafk
+    default: op
+  afklog.panel:
+    description: Pozwala na /afkpanel
+    default: op
+  afklog.kicker:
+    description: Pozwala na /afkkicker
+    default: op
+  afklog.grupa:
+    description: Pozwala na /dodajgrupeafk
+    default: op
+  afklog.usungrupe:
+    description: Pozwala na /usungrupeafk
+    default: op
+  afklog.stats:
+    description: Pozwala na /afkstats
+    default: op

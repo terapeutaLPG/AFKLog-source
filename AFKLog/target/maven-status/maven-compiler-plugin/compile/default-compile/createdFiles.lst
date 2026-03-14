@@ -1,0 +1,11 @@
+pl\jaruso99\afklog\gui\AFKPanelGUI.class
+pl\jaruso99\afklog\managers\DatabaseManager.class
+pl\jaruso99\afklog\listeners\PlayerListener.class
+pl\jaruso99\afklog\gui\PlayerLogsGUI.class
+pl\jaruso99\afklog\models\TrackedPlayer.class
+pl\jaruso99\afklog\managers\AFKManager.class
+pl\jaruso99\afklog\AFKLogPlugin.class
+pl\jaruso99\afklog\models\AFKSession.class
+pl\jaruso99\afklog\managers\LuckPermsManager.class
+pl\jaruso99\afklog\commands\CommandHandler.class
+pl\jaruso99\afklog\listeners\GUIListener.class
